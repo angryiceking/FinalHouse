@@ -14,7 +14,7 @@ def stop_sound():
 
 def start():
     os.system('clear')
-    raw_input('Press any key to start game. Press CTRL+C to QUIT.')
+    raw_input('\n\n\n\n\n\nPress any key to start game. Press CTRL+C to QUIT.')
     os.system('clear')
 
 def loading_files():
@@ -33,10 +33,15 @@ def delay_print(s):
         sys.stdout.flush()
         time.sleep(0.10)
 
+def cont_or_quit():
+    raw_input('Q to quit C to continue')
+
 def intro():
     pygame.mixer.music.stop()
     sound('sound.mp3')
-    delay_print('\nYou woke up from a dark room.')
+    delay_print('You\nwoke\nup\nin\nthe\nmiddle\nof\nthe\nnight.\n')
+    time.sleep(1)
+    delay_print('in\nan\nunfamiliar\nplace..')
 
 def main():
     pygame.init()
